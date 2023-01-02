@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div  class="logo">
+                <button class="openbtn toggler" data-target="#popupSearch">
+                    <img src="icons/logo.png" alt="">
+                </button>
+            </div>
+            <div class="sectioMenu toggler" data-target=".sidebar">
+                <span class="material-symbols-outlined">
+                menu
+                </span>
+            </div>
+        </div>
+        <div class="content-main">
+            <div class="menu">
+                <ul>
+                    <li> 
+                        <button class="openbtn toggler" data-target="#hi_content">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </button> 
+                        <h4>Hi there! </h4>
+                        <h4>I’m Meritxell</h4>  
+                        <div id="hi_content" class=" txt collapse_content closed">
+                            I’m UX researcher located in Malmö, Sweden. Currently I work creating 
+                            inclusive experiences in <div class="link"><a href="www.ikea.com">ikea.com</a></div>.
+                            I empower teams to take braver decisions by building deep consumer 
+                            understanding and collaboration.
+                        </div>
+                    </li>
+                    <li>
+                        <button class="openbtn toggler" data-target="#popupSearch">
+                            <span class="material-symbols-outlined">
+                                arrow_outward
+                            </span>
+                        </button> 
+                        <h4>Search experience</h4>
+                    </li>
+                    <li>
+                        <button class="openbtn toggler" data-target="#hi_content">
+                            <span class="material-symbols-outlined">
+                                arrow_outward
+                            </span>
+                        </button>
+                        <h4>Product comparison</h4>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar closed">
+            <button class="closebtn toggler" data-target=".sidebar">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+            <ul>
+                <li> 
+                    <a href="#" class="link_txt">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="link_txt">About</a>
+                </li>
+                <li class="icon">
+                    <a href="#" class="link_icon">
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+                    </a>
+                </li>
+                <li class="icon">
+                    <a href="#" class="link_icon">#</a>
+                </li>
+            </ul>
+            
+        </div>
+        <div id="popupSearch" class="popup closed">
+            <div class="popup-content">
+                <h4>Search experience</h4>
+                <p>
+                    I work in the search team during convulsive times. The teams' merge, technical legacy to clean up, a profound 
+                    change of all the components of the team and new disciplines to learn to collaborate with. This unique times, 
+                    gave me the opportunity to do what it wasn’t possible: presenting adapted search result pages based on 
+                    predicted customer intents.
+                </p>
+                <h5>SKILLS</h5>
+                <p>Research, UX Strategy, UX/UI, User Testing, Prototyping</p>
+                <h5>COMPANY</h5>
+                <p>IKEA  2023</p>
+                <h5>CREDITS</h5>
+                <p>Listing team (15 coworkers)</p>
+            </div>
+        </div>
+    </body>
+</html>
