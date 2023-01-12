@@ -4,18 +4,25 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/index.css">
         <script src="js/index.js"></script>
     </head>
     <body>
         <div class="header">
             <div  class="logo">
-                <button class="openbtn toggler" data-target="#popupSearch">
-                    <img src="icons/logo.png" alt="">
+                <button class="openbtn closer" data-target=".homeTarget">
+                    <object class="img" alt="">
+                        <svg class="popupSearch popupAbout homeTarget logo closed" width="98" height="98" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect class="strokeElement" x="4.75" y="4.75" width="37.0978" height="37.0978" stroke-width="1.5"/>
+                            <rect class="strokeElement" x="19.1522" y="19.1523" width="37.0978" height="37.0978" stroke-width="1.5"/>
+                            <rect class="strokeElement" x="19.1522" y="19.1523" width="16.3587" height="16.3587" stroke-width="1.5"/>
+                        </svg>
+                    </object>
                 </button>
             </div>
             <div class="sectioMenu toggler" data-target=".sidebar">
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined homeTarget popupSearch popupAbout closed">
                 menu
                 </span>
             </div>
@@ -24,14 +31,14 @@
             <div class="menu">
                 <ul>
                     <li> 
-                        <button class="openbtn toggler" data-target="#hi_content">
-                            <span class="material-symbols-outlined">
-                                add
+                        <button class="openbtn toggler" data-target=".hi_element">
+                            <span class="material-symbols-outlined closed hi_button hi_element">
+                                <img src="icons/cross.svg" alt="">
                             </span>
                         </button> 
                         <h4>Hi there! </h4>
                         <h4>I’m Meritxell</h4>  
-                        <div id="hi_content" class=" txt collapse_content closed">
+                        <div id="hi_content" class="hi_element txt collapse_content closed">
                             I’m UX researcher located in Malmö, Sweden. Currently I work creating 
                             inclusive experiences in <div class="link"><a href="www.ikea.com">ikea.com</a></div>.
                             I empower teams to take braver decisions by building deep consumer 
@@ -39,7 +46,7 @@
                         </div>
                     </li>
                     <li>
-                        <button class="openbtn toggler" data-target="#popupSearch">
+                        <button class="openbtn toggler" data-target=".popupSearch">
                             <span class="material-symbols-outlined">
                                 arrow_outward
                             </span>
@@ -47,18 +54,26 @@
                         <h4>Search experience</h4>
                     </li>
                     <li>
-                        <button class="openbtn toggler" data-target="#hi_content">
+                        <button class="openbtn toggler" data-target=".popupAbout">
                             <span class="material-symbols-outlined">
                                 arrow_outward
                             </span>
                         </button>
                         <h4>Product comparison</h4>
                     </li>
+                    <li>
+                        <button class="openbtn toggler" data-target="#hi_content">
+                            <span class="material-symbols-outlined">
+                                arrow_outward
+                            </span>
+                        </button>
+                        <h4>ehealth ecosystem</h4>
+                    </li>
 
                 </ul>
             </div>
         </div>
-        <div class="sidebar closed">
+        <div class="sidebar homeTarget closed">
             <button class="closebtn toggler" data-target=".sidebar">
                 <span class="material-symbols-outlined">
                     close
@@ -66,10 +81,10 @@
             </button>
             <ul>
                 <li> 
-                    <a href="#" class="link_txt">Home</a>
+                    <button class="link_txt closer" data-target=".homeTarget">Home</button>
                 </li>
                 <li>
-                    <a href="#" class="link_txt">About</a>
+                    <button class="link_txt toggler" data-target=".popupAbout,">About</button>
                 </li>
                 <li class="icon">
                     <a href="#" class="link_icon">
@@ -79,12 +94,14 @@
                     </a>
                 </li>
                 <li class="icon">
-                    <a href="#" class="link_icon">#</a>
+                    <a href="#" class="link_icon">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
                 </li>
             </ul>
             
         </div>
-        <div id="popupSearch" class="popup closed">
+        <div id="popupSearch" class="popupSearch homeTarget popup closed">
             <div class="popup-content">
                 <h4>Search experience</h4>
                 <p>
@@ -99,6 +116,90 @@
                 <p>IKEA  2023</p>
                 <h5>CREDITS</h5>
                 <p>Listing team (15 coworkers)</p>
+                <div class="grafic-content">
+                    <img src="img/search_1b.png" alt="Search">
+                    <img src="img/search_1c.png" alt="Search">
+                    <img src="img/search_1a.png" alt="Search">
+                </div>
+                <h4>The goal</h4>
+                <p>
+                    The application presented a "one-fit-all” journey, based on the standard product-type of search in e-commerce sites. 
+                    It presented several inefficiencies when encountering multiple search terms or queries which weren't necessary 
+                    products and accesibility issues.
+                </p>
+                <h4>Process</h4>
+                <p>
+                    The process naturally followed an HCD approach from empathising with the users that helped to create a “model” or hypothesis, 
+                    set the systems to be able to run analytics, and phrase the right problem in the definition phase. I involved the team from 
+                    the definition phase. It helped not only to confirm the model and share the same goal across the team, but also engineering 
+                    and data scientist were able to come with a plan to train the algorithm to do want we wanted it to do.
+                </p>
+                <div class="grafic-content">
+                    <img src="img/search_2.jpg">
+                    <p class="footer-image">I used different techniques: analytics, desk research, usabillity tests and qualitative researches.</p>
+                </div>
+                <div class="grafic-content">
+                    <img src="img/search_3.png">
+                    <p class="footer-image">I destiled the learnings in a "model" to based the future work.</p>
+                </div>
+                <div class="grafic-content">
+                    <img src="img/search_4a.jpg">
+                    <img src="img/search_4b.png">
+                    <p class="footer-image">I designed the team's tracking tool that will allow as to map behaviours.</p>
+                </div>
+            </div>
+        </div>
+        <div id="popupAbout" class="popupAbout homeTarget popup closed">
+            <div class="popup-content">
+                <p>
+                    For 5+ years, I have been harnessing the power of human-centered insights to impact strategy.
+                </p>
+                <p>
+                    Through deep consumer understanding, I guide teams in making braver decisions in terms of design, 
+                    innovation, communication and positioning.
+                </p>
+                <p>
+                    I am conversant in building research plans combining qualitative and quantitative methods, using 
+                    a data-inspire approach to strategic decisions (as a result of my experience in teams with strong 
+                    data-driven culture).
+                </p>
+                <p>
+                    At work, my interest goes towards working on human-centered technologies and services, that are 
+                    inclusive and respects human vulnerabilities.
+                </p>
+                <p class="spacialLabel">
+                    <span>#Data-informed innovation</span>
+                    <span> #Data-driven services</span>
+                    <span>#Human technologist</span>
+                </p>
+                <h5>CONTACT</h5>
+                <p>
+                    meritxellpujol@gmail.com
+                </p>
+                <p>
+                    Resume
+                </p>
+                <h5> SKILLS</h5>
+                <p>
+                    <span> startegy</span>
+                    <span>UX Research</span>
+                    <span>Design Strategy</span>
+                    <span>UX Design</span>
+                    <span>Prototyping</span>
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-blockL">
+                <span>Footer text</span>
+            </div>
+            <div class="footer-blockR">
+                <a href="#" class="link_icon">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="link_icon">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </body>
